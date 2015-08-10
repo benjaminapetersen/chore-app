@@ -1,0 +1,17 @@
+<md-content>
+  <h3>
+    Remove {{item.title}}?
+  </h3>
+  <md-button
+    class="md-raised"
+    ng-click="goTo('/lists')">
+    Cancel
+  </md-button>
+
+  <md-button
+    class="md-raised md-warn"
+    ng-click="remove()">
+    Confirm
+  </md-button>
+
+</md-content>

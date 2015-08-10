@@ -1,0 +1,35 @@
+<md-list-item class="md-3-line" layout="row">
+  <div class="md-list-item-text">
+    <div layout="row">
+      <h3 flex>{{item.title}} ({{item.points}}pts)</h3>
+    </div>
+    <div>{{item.description}}</div>
+    <div>
+      in lists:
+      <span ng-repeat="list in item.lists">
+        {{getListById(list).title}}
+        {{$last ? '' : ', '}}
+      </span>
+    </div>
+    <div>
+      <a href="#/tasks/{{item.id}}/edit">
+        edit
+      </a>
+      <a href="#/tasks/{{item.id}}/remove">
+        remove
+      </a>
+    </div>
+
+  </div>
+  <div layout="row">
+    <div
+      ng-repeat="assignee in item.assigned_to"
+      layout="column" class="md-padding">
+      <div>{{getUserById(assignee).name.first}}</div>
+      <md-checkbox
+        ng-model="assignee_bool"
+        aria-label="{{assignee}}"></md-checkbox>
+    </div>
+  </div>
+</md-list-item>
+<md-divider></md-divider>

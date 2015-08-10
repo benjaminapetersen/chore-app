@@ -1,0 +1,18 @@
+{
+  "name": "chore-app",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "angular-material": "~0.10.0",
+    "angular-route": "~1.4.3",
+    "ang-pub-sub": "git://github.com/benjaminapetersen/angular-simple-pubsub.git",
+    "material-design-icons": "~2.0.0",
+    "lodash": "~3.10.0",
+    "angular-animate": "~1.4.3",
+    "json3": "~3.3.2"
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "mocha": "~2.2.5"
+  }
+}

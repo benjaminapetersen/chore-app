@@ -1,0 +1,16 @@
+<md-content>
+  <md-card class="md-padding">
+    <md-list>
+      <md-subheader class="md-no-sticky">Lists</md-subheader>
+      <div ng-repeat="item in items">
+        <ng-include
+          src="'/scripts/lists/views/_item.html'"></ng-include>
+      </div>
+      <md-button
+        class="md-raised md-primary"
+        ng-click="goTo('/lists/create')">
+        create
+      </md-button>
+    </md-list>
+  </md-card>
+</md-content>

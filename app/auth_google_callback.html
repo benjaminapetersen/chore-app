@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chore app</title>
+
+  </head>
+  <body>
+    <div layout-fill layout="column">
+
+      <!--
+        TODO.
+      <oauth-token-cacher
+        store_key="auth_google"
+        redirect="/">Foo</oauth-token-cacher>
+      -->
+    </div>
+
+
+    <script>
+      (function() {
+
+        // if hash based url
+        var parseUrlHash = function (str) {
+          str = str || window.location.href;
+          var trimmed = str && str.replace(/^.*#/, ''),
+              params = {};
+          if (!trimmed) {
+              return params;
+          }
+          trimmed.replace(
+              new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+              function ($0, $1, $2, $3) {
+                  params[decodeURIComponent($1)] = decodeURIComponent($3);
+              });
+          return params;
+        };
+
+        // if a response_type="code" instead of "token"
+        var parseUrlParams = function() {
+          var args = document.location.search.substring(1).split('&');
+          var argsParsed = {};
+          for (i=0; i < args.length; i++) {
+            var arg = decodeURIComponent(args[i]);
+
+            if (arg.indexOf('=') == -1) {
+                argsParsed[arg.trim()] = true;
+            } else {
+                var kvp = arg.split('=');
+                argsParsed[kvp[0].trim()] = kvp[1].trim();
+            }
+          }
+          return argsParsed;
+        }
+
+        var params = parseUrlHash();
+
+        sessionStorage.setItem('auth_google', JSON.stringify(params));
+        window.location.href = params && params.
+      })();
+
+
+    </script>
+
+    <!--
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <script src="scripts/auth/routes.js"></script>
+    <script src="scripts/auth/directives/oauth-token-cacher.js"></script>
+    -->
+  </body>
+</html>

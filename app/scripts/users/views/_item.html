@@ -1,0 +1,25 @@
+<md-list-item class="md-3-line">
+  <img
+    ng-src="{{item.img}}?{{$index}}"
+    class="md-avatar"
+    alt="{{item.name.first}}" />
+  <div class="md-list-item-text">
+    <h3>
+      <a href="#/users/{{item.id}}">
+        {{item.name.first}} {{item.name.last}}
+      </a>
+    </h3>
+    <a href="#/users/{{item.id}}/edit">
+      edit
+    </a>
+    <a href="#/users/{{item.id}}/remove">
+      remove
+    </a>
+    <div>
+      <span ng-repeat="role in item.roles">
+        {{role}}
+      </span>
+    </div>
+  </div>
+</md-list-item>
+<md-divider></md-divider>

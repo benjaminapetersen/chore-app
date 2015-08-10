@@ -1,0 +1,33 @@
+<form name="user">
+
+  <md-input-container>
+    <label>First name</label>
+    <input ng-model="item.name.first">
+  </md-input-container>
+  <md-input-container>
+    <label>Middle name</label>
+    <input ng-model="item.name.middle">
+  </md-input-container>
+  <md-input-container>
+    <label>Last name</label>
+    <input ng-model="item.name.last">
+  </md-input-container>
+  <!--
+    Adding users should be easy.
+    Edit can deal with the extra fields later.
+  -->
+  <md-input-container>
+    <label>Birthday</label>
+    <input ng-model="item.birthdate">
+  </md-input-container>
+
+  <md-input-container>
+    <label>Email</label>
+    <input ng-model="item.email">
+  </md-input-container>
+  <!--
+    Tags?  Roles?
+    - roles is at least important, should be a checkbox list of
+      roles already defined in the system.
+  -->
+</form>

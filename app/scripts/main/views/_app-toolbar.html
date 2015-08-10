@@ -1,0 +1,21 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button
+      ng-if="more"
+        ng-click="back()"
+      class="md-icon-button" aria-label="More">
+      <md-icon md-font-library="material-icons">arrow_back</md-icon>
+    </md-button>
+    <h2>
+      <span>{{title}}</span>
+    </h2>
+    <span flex></span>
+    <div ng-transclude></div>
+    <md-button
+      ng-if="more"
+        ng-click="showMore()"
+      class="md-icon-button" aria-label="More">
+      <md-icon md-font-library="material-icons">more_vert</md-icon>
+    </md-button>
+  </div>
+</md-toolbar>

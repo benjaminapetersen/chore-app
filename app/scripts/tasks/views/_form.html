@@ -1,0 +1,42 @@
+<form name="form">
+
+  <md-input-container>
+    <label>Title</label>
+    <input ng-model="item.title">
+  </md-input-container>
+
+  <md-input-container>
+    <label>Description</label>
+    <input ng-model="item.description">
+  </md-input-container>
+  <!--
+    tags?
+  -->
+  <md-input-container>
+    <label>Point value</label>
+    <input ng-model="item.points">
+  </md-input-container>
+
+  <div>Belongs to List:</div>
+  <div layout="row">
+    <md-checkbox
+      ng-repeat="list in lists"
+      aria-label="{{list.title}}"
+      ng-checked="exists(list.id, selectedLists)"
+      ng-click="toggle(list.id, selectedLists)">
+      {{list.title || 'unknown'}}
+    </md-checkbox>
+  </div>
+
+  <div>Assigned to users:</div>
+  <div layout="row">
+    <md-checkbox
+      ng-repeat="user in users"
+      aria-label="{{user.name.first}}"
+      ng-checked="exists(user.id, selectedUsers)"
+      ng-click="toggle(user.id, selectedUsers)">
+      {{user.name.first || 'unknown'}}
+    </md-checkbox>
+  </div>
+
+</form>

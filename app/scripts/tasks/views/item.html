@@ -1,0 +1,11 @@
+<md-content>
+  <md-card class="md-padding">
+    <md-list>
+      <md-subheader class="md-no-sticky">Task</md-subheader>
+      <div ng-repeat="item in items">
+        <ng-include
+          src="'/scripts/tasks/views/_item.html'"></ng-include>
+      </div>
+    </md-list>
+  </md-card>
+</md-content>

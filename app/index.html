@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="chore">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chore app</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/material-icon-font.css">
+    <link rel="stylesheet" href="styles/view-animate.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <style>
+        [outline] {
+            outline: 1px dashed #990000;
+        }
+        [full-height] {
+            height: 100%;
+        }
+    </style>
+    <!-- root context, required for HTML5 mode -->
+    <base href="/">
+
+  </head>
+  <body>
+    <div layout-fill layout="column">
+        <app-toolbar
+            title="Chore App"
+            more></app-toolbar>
+
+        <div layout="row" flex>
+            <div flex="20" layout="column" full-height>
+                <app-menu></app-menu>
+            </div>
+            <div flex="80" layout="column" full-height>
+                <div
+                    ng-view
+                    id="temp-mobile-wrapper"
+                    class="view-animate-disabled"><!-- Views injected here --></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/ang-pub-sub/pubsub.js"></script>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/init.js"></script>
+    <script src="scripts/env.js"></script>
+
+    <script src="scripts/main/directives/app-toolbar.js"></script>
+    <script src="scripts/main/directives/app-menu.js"></script>
+
+    <script src="scripts/storage/routes.js"></script>
+    <script src="scripts/storage/services/local.js"></script>
+    <script src="scripts/storage/services/session.js"></script>
+
+    <script src="scripts/auth/routes.js"></script>
+    <!-- <script src="scripts/auth/services/auth.js"></script>
+    <script src="scripts/auth/directives/oauth2-link.js"></script>
+    <script src="scripts/auth/directives/oauth-token-cacher.js"></script>
+    <script src="scripts/auth/controllers/google_callback.js"></script> -->
+    <script src="scripts/auth/controllers/login.js"></script>
+    <script src="scripts/auth/controllers/logout.js"></script>
+
+    <script src="scripts/dashboard/routes.js"></script>
+    <script src="scripts/dashboard/controllers/dashboard.js"></script>
+
+    <script src="scripts/lists/routes.js"></script>
+    <script src="scripts/lists/services/lists.js"></script>
+    <script src="scripts/lists/controllers/list.js"></script>
+    <script src="scripts/lists/controllers/item.js"></script>
+    <script src="scripts/lists/controllers/edit.js"></script>
+    <script src="scripts/lists/controllers/create.js"></script>
+    <script src="scripts/lists/controllers/remove.js"></script>
+
+    <script src="scripts/tasks/routes.js"></script>
+    <script src="scripts/tasks/services/tasks.js"></script>
+    <script src="scripts/tasks/controllers/list.js"></script>
+    <script src="scripts/tasks/controllers/create.js"></script>
+    <script src="scripts/tasks/controllers/edit.js"></script>
+    <script src="scripts/tasks/controllers/item.js"></script>
+    <script src="scripts/tasks/controllers/remove.js"></script>
+
+    <script src="scripts/users/routes.js"></script>
+    <script src="scripts/users/services/users.js"></script>
+    <script src="scripts/users/controllers/list.js"></script>
+    <script src="scripts/users/controllers/item.js"></script>
+    <script src="scripts/users/controllers/edit.js"></script>
+    <script src="scripts/users/controllers/create.js"></script>
+    <script src="scripts/users/controllers/remove.js"></script>
+
+    <script src="scripts/allowance/routes.js"></script>
+    <script src="scripts/allowance/services/allowance.js"></script>
+    <script src="scripts/allowance/controllers/list.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
