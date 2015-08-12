@@ -15,6 +15,8 @@ angular.module('chore')
           '$window',
           'pubsub',
           function($location, $scope, $timeout, $window, pubsub) {
+
+            // TODO: filter down the links based on the current user...
             var links = [
               {
                 title: 'Lists',
@@ -35,6 +37,14 @@ angular.module('chore')
               {
                 title: 'Login',
                 url: '#/login'
+              },
+              {
+                title: 'Permsissions',
+                url: '#/permissions'
+              },
+              {
+                title: 'Roles',
+                url: '#/roles'
               }
             ]
             angular.extend($scope, {

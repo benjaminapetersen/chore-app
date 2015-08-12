@@ -1,0 +1,20 @@
+<md-list-item class="md-3-line" layout="row">
+  <div class="md-list-item-text">
+    <div layout="row">
+      <a href="#/lists/{{item.id}}">
+        {{item.title}}
+      </a>
+    </div>
+    <div>{{item.description}}</div>
+    <div>
+      <!-- TODO: perms! -->
+      <a href="#/lists/{{item.id}}/edit">
+        edit
+      </a>
+      <a href="#/lists/{{item.id}}/remove">
+        remove
+      </a>
+    </div>
+  </div>
+</md-list-item>
+<md-divider></md-divider>

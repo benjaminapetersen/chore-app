@@ -14,6 +14,8 @@ angular.module('chore', [
     'chore.tasks',
     'chore.dashboard',
     'chore.users',
+    'chore.permissions',
+    'chore.roles',
     'chore.env'
     // filters
     // routes..?

@@ -18,7 +18,7 @@ angular.module('chore.storage')
       // localStorage
       var api = {
         all: function(key) {
-          return $q.when(JSON.parse(storage.getItem(key)) || []);
+          return $q.when(JSON.parse(storage.getItem(key) || '[]'));
         },
         create: function(key, item) {
           return api

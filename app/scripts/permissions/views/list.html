@@ -1,0 +1,19 @@
+<md-content>
+  <md-card class="md-padding">
+    <md-list>
+      <md-subheader class="md-no-sticky">Permissions</md-subheader>
+      <div ng-repeat="item in items">
+        <ng-include
+          src="'/scripts/permissions/views/_item.html'"></ng-include>
+      </div>
+      <md-subheader class="md-no-sticky">Add new:</md-subheader>
+      <ng-include
+        src="'/scripts/permissions/views/_form.html'"></ng-include>
+      <md-button
+        class="md-raised md-primary"
+        ng-click="add()">
+        add
+      </md-button>
+    </md-list>
+  </md-card>
+</md-content>
