@@ -8,6 +8,13 @@ angular.module('chore.lists')
     function($log, $q, storage) {
       var key = 'chore:lists';
 
+      var perms = [
+        'view:lists',
+        'edit:lists',
+        'create:lists',
+        'remove:lists'
+      ];
+
       return {
         // get all
         all: function() {

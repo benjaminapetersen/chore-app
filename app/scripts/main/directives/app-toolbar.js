@@ -17,7 +17,15 @@ angular.module('chore')
           '$timeout',
           '$window',
           'pubsub',
-          function($location, $scope, $timeout, $window, pubsub) {
+          'currentUser',
+          function($location, $scope, $timeout, $window, pubsub, currentUser) {
+
+            currentUser
+              .get()
+              .then(function(user) {
+                $scope.user = user;
+              })
+
             // todo:
             // simply setting up the event system, will use later
             var events = [
@@ -26,6 +34,13 @@ angular.module('chore')
               }),
               pubsub.subscribe('foo', function(options) {
                 console.log('foo', options);
+              }),
+              pubsub.subscribe('user:current', function(options) {
+                currentUser
+                  .get()
+                  .then(function(user) {
+                    $scope.user = user;
+                  });
               }),
             ]
 

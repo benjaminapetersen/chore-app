@@ -12,6 +12,7 @@
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -66,17 +67,17 @@
     </script>
 
     <!-- build:js scripts/vendor.js -->
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <script src="bower_components/lodash/lodash.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="bower_components/ang-pub-sub/pubsub.js"></script>
     <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/json3/lib/json3.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="bower_components/ang-pub-sub/pubsub.js"></script>
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/init.js"></script>
@@ -85,46 +86,12 @@
     <script src="scripts/main/directives/app-toolbar.js"></script>
     <script src="scripts/main/directives/app-menu.js"></script>
 
-    <script src="scripts/storage/routes.js"></script>
+    <script src="scripts/storage/config.js"></script>
+    <script src="scripts/storage/services/crud.js"></script>
     <script src="scripts/storage/services/local.js"></script>
     <script src="scripts/storage/services/session.js"></script>
 
-    <script src="scripts/auth/routes.js"></script>
-    <!-- <script src="scripts/auth/services/auth.js"></script>
-    <script src="scripts/auth/directives/oauth2-link.js"></script>
-    <script src="scripts/auth/directives/oauth-token-cacher.js"></script>
-    <script src="scripts/auth/controllers/google_callback.js"></script> -->
-    <script src="scripts/auth/controllers/login.js"></script>
-    <script src="scripts/auth/controllers/logout.js"></script>
-
-    <script src="scripts/dashboard/routes.js"></script>
-    <script src="scripts/dashboard/controllers/dashboard.js"></script>
-
-    <script src="scripts/lists/routes.js"></script>
-    <script src="scripts/lists/services/lists.js"></script>
-    <script src="scripts/lists/controllers/list.js"></script>
-    <script src="scripts/lists/controllers/item.js"></script>
-    <script src="scripts/lists/controllers/edit.js"></script>
-    <script src="scripts/lists/controllers/create.js"></script>
-    <script src="scripts/lists/controllers/remove.js"></script>
-
-    <script src="scripts/tasks/routes.js"></script>
-    <script src="scripts/tasks/services/tasks.js"></script>
-    <script src="scripts/tasks/controllers/list.js"></script>
-    <script src="scripts/tasks/controllers/create.js"></script>
-    <script src="scripts/tasks/controllers/edit.js"></script>
-    <script src="scripts/tasks/controllers/item.js"></script>
-    <script src="scripts/tasks/controllers/remove.js"></script>
-
-    <script src="scripts/users/routes.js"></script>
-    <script src="scripts/users/services/users.js"></script>
-    <script src="scripts/users/controllers/list.js"></script>
-    <script src="scripts/users/controllers/item.js"></script>
-    <script src="scripts/users/controllers/edit.js"></script>
-    <script src="scripts/users/controllers/create.js"></script>
-    <script src="scripts/users/controllers/remove.js"></script>
-
-    <script src="scripts/roles/routes.js"></script>
+    <script src="scripts/roles/config.js"></script>
     <script src="scripts/roles/services/roles.js"></script>
     <script src="scripts/roles/controllers/list.js"></script>
     <script src="scripts/roles/controllers/item.js"></script>
@@ -132,7 +99,7 @@
     <script src="scripts/roles/controllers/create.js"></script>
     <script src="scripts/roles/controllers/remove.js"></script>
 
-    <script src="scripts/permissions/routes.js"></script>
+    <script src="scripts/permissions/config.js"></script>
     <script src="scripts/permissions/services/permissions.js"></script>
     <script src="scripts/permissions/controllers/list.js"></script>
     <script src="scripts/permissions/controllers/item.js"></script>
@@ -140,7 +107,50 @@
     <script src="scripts/permissions/controllers/create.js"></script>
     <script src="scripts/permissions/controllers/remove.js"></script>
 
-    <script src="scripts/allowance/routes.js"></script>
+    <script src="scripts/auth/config.js"></script>
+    <!-- <script src="scripts/auth/services/auth.js"></script>
+    <script src="scripts/auth/directives/oauth2-link.js"></script>
+    <script src="scripts/auth/directives/oauth-token-cacher.js"></script>
+    <script src="scripts/auth/controllers/google_callback.js"></script> -->
+    <script src="scripts/auth/controllers/login.js"></script>
+    <script src="scripts/auth/controllers/logout.js"></script>
+
+    <script src="scripts/dashboard/config.js"></script>
+    <script src="scripts/dashboard/controllers/dashboard.js"></script>
+
+    <script src="scripts/setup/config.js"></script>
+    <script src="scripts/setup/controllers/start.js"></script>
+    <script src="scripts/setup/controllers/user.js"></script>
+    <script src="scripts/setup/controllers/examples.js"></script>
+    <script src="scripts/setup/controllers/finish.js"></script>
+
+    <script src="scripts/lists/config.js"></script>
+    <script src="scripts/lists/services/lists.js"></script>
+    <script src="scripts/lists/controllers/list.js"></script>
+    <script src="scripts/lists/controllers/item.js"></script>
+    <script src="scripts/lists/controllers/edit.js"></script>
+    <script src="scripts/lists/controllers/create.js"></script>
+    <script src="scripts/lists/controllers/remove.js"></script>
+
+    <script src="scripts/tasks/config.js"></script>
+    <script src="scripts/tasks/services/tasks.js"></script>
+    <script src="scripts/tasks/controllers/list.js"></script>
+    <script src="scripts/tasks/controllers/create.js"></script>
+    <script src="scripts/tasks/controllers/edit.js"></script>
+    <script src="scripts/tasks/controllers/item.js"></script>
+    <script src="scripts/tasks/controllers/remove.js"></script>
+
+    <script src="scripts/users/config.js"></script>
+    <script src="scripts/users/services/users.js"></script>
+    <script src="scripts/users/services/currentUser.js"></script>
+    <script src="scripts/users/controllers/list.js"></script>
+    <script src="scripts/users/controllers/item.js"></script>
+    <script src="scripts/users/controllers/edit.js"></script>
+    <script src="scripts/users/controllers/create.js"></script>
+    <script src="scripts/users/controllers/remove.js"></script>
+    <script src="scripts/users/controllers/activate.js"></script>
+
+    <script src="scripts/allowance/config.js"></script>
     <script src="scripts/allowance/services/allowance.js"></script>
     <script src="scripts/allowance/controllers/list.js"></script>
     <!-- endbuild -->

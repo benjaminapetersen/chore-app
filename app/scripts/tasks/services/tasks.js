@@ -8,6 +8,14 @@ angular.module('chore.tasks')
     function($log, $q, storage) {
       var key = 'chore:tasks';
 
+      var perms = [
+        'view:tasks',
+        'edit:tasks',
+        'create:tasks',
+        'remove:tasks',
+        'do:tasks'
+      ];
+
       return {
         // get all
         all: function() {

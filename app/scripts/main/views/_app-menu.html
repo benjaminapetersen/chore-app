@@ -1,5 +1,12 @@
 <md-list>
-  <div ng-repeat="item in links">
+  <div
+    ng-repeat="item in links">
+
+    <!--
+    TODO: need a way to do:
+    currentUser.can(item.perm)  // view:tasks
+    to control show/hide of items here.
+    -->
     <md-list-item>
       <div class="md-list-item-text">
         <a href="{{item.url}}">

@@ -25,9 +25,22 @@
     <label>Email</label>
     <input ng-model="item.email">
   </md-input-container>
+
+  <div>Roles:</div>
+  <div layout="row">
+    <md-checkbox
+      ng-repeat="role in roles"
+      aria-label="{{role}}"
+      ng-checked="exists(role, selectedRoles)"
+      ng-click="toggle(role, selectedRoles)">
+      {{role || 'unknown'}}
+    </md-checkbox>
+  </div>
+
   <!--
     Tags?  Roles?
     - roles is at least important, should be a checkbox list of
       roles already defined in the system.
   -->
+
 </form>

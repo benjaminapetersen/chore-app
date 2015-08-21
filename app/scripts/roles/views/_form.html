@@ -10,4 +10,15 @@
     <input ng-model="item.description">
   </md-input-container>
 
+  <div>Has the following permissions:</div>
+  <div layout="row">
+    <md-checkbox
+      ng-repeat="perm in permissions"
+      aria-label="{{perm.title}}"
+      ng-checked="exists(perm.id, selectedPerms)"
+      ng-click="toggle(perm.id, selectedPerms)">
+      {{perm.title || 'unknown'}}
+    </md-checkbox>
+  </div>
+
 </form>

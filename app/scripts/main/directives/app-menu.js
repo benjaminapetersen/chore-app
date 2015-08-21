@@ -20,19 +20,23 @@ angular.module('chore')
             var links = [
               {
                 title: 'Lists',
-                url: '#/lists'
+                url: '#/lists',
+                perm: 'view:lists'
               },
               {
                 title: 'Tasks',
-                url: '#/tasks'
+                url: '#/tasks',
+                perm: 'view:tasks'
               },
               {
                 title: 'Allowance',
-                url: '#/allowance'
+                url: '#/allowance',
+                perm: 'view:allowance'
               },
               {
                 title: 'Users',
-                url: '#/users'
+                url: '#/users',
+                perm: 'view:users'
               },
               {
                 title: 'Login',
@@ -40,11 +44,13 @@ angular.module('chore')
               },
               {
                 title: 'Permsissions',
-                url: '#/permissions'
+                url: '#/permissions',
+                perm: 'view:permissions'
               },
               {
                 title: 'Roles',
-                url: '#/roles'
+                url: '#/roles',
+                perm: 'view:roles'
               }
             ]
             angular.extend($scope, {

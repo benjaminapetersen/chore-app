@@ -8,6 +8,13 @@ angular.module('chore.users')
     function($log, $q, storage) {
       var key = 'chore:users';
 
+      var perms = [
+        'view:users',
+        'edit:users',
+        'create:users',
+        'remove:users'
+      ];
+
       // TODO:
       // this needs to be updated to be a real API,
       // not a hard coded array in the service.

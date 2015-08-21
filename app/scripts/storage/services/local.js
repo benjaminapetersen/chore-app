@@ -17,8 +17,12 @@ angular.module('chore.storage')
       // method needs to deal with them as a set when going in and out of
       // localStorage
       var api = {
-        all: function(key) {
-          return $q.when(JSON.parse(storage.getItem(key) || '[]'));
+        // get, or
+        // set if items provided
+        all: function(key, items) {
+          return items ?
+                  $q.when(storage.setItem(key, JSON.stringify(items))) :
+                  $q.when(JSON.parse(storage.getItem(key) || '[]'));
         },
         create: function(key, item) {
           return api

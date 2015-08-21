@@ -7,6 +7,7 @@ angular.module('chore', [
     'ngMaterial',
     'pubsub',
     // app modules
+    'chore.setup',
     'chore.storage',
     'chore.auth',
     'chore.allowance',
@@ -32,7 +33,7 @@ angular.module('chore', [
 
     $routeProvider
       .when('/', {
-        redirectTo: '/tasks'
+        redirectTo: '/setup'
       });
   }
 ])
